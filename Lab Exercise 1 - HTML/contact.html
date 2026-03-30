@@ -25,10 +25,94 @@
     </nav>
     <main>
         <section>
-
+            <h1>Contact Me</h1>
         </section>
         <section>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
 
+                    <!-- Full Name -->
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Your full name" required
+                        maxlength="60"><br><br>
+
+                    <!-- Email -->
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+                    <!-- Phone -->
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br><br>
+
+                    <!-- Age -->
+                    <label for="age">Age:</label><br>
+                    <input type="number" id="age" name="age" min="18" max="100" required><br><br>
+
+                    <!-- Date -->
+                    <label for="date">Preferred Contact Date:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+
+                    <!-- Range -->
+                    <label for="satisfaction">How satisfied are you with this site?</label><br>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10"><br><br>
+
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Inquiry Details</legend>
+
+                    <!-- Subject Dropdown -->
+                    <label for="subject">Subject:</label><br>
+                    <select id="subject" name="subject" required>
+
+                        <optgroup label="General">
+                            <option value="question">General Question</option>
+                            <option value="feedback">Feedback</option>
+                        </optgroup>
+
+                        <optgroup label="Business">
+                            <option value="collaboration">Collaboration</option>
+                            <option value="job">Job Opportunity</option>
+                        </optgroup>
+
+                    </select><br><br>
+
+                    <!-- Checkboxes -->
+                    <p>Services Interested In:</p>
+
+                    <input type="checkbox" id="webdev" name="services" value="webdev">
+                    <label for="webdev">Web Development</label><br>
+
+                    <input type="checkbox" id="design" name="services" value="design">
+                    <label for="design">UI/UX Design</label><br>
+
+                    <input type="checkbox" id="consulting" name="services" value="consulting">
+                    <label for="consulting">Consulting</label><br><br>
+
+                    <!-- Radio Buttons -->
+                    <p>Preferred Contact Method:</p>
+
+                    <input type="radio" id="email_contact" name="contact_method" value="email" required>
+                    <label for="email_contact">Email</label><br>
+
+                    <input type="radio" id="phone_contact" name="contact_method" value="phone">
+                    <label for="phone_contact">Phone</label><br>
+
+                    <input type="radio" id="whatsapp_contact" name="contact_method" value="whatsapp">
+                    <label for="whatsapp_contact">WhatsApp</label><br><br>
+
+                    <!-- Message -->
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..."
+                        maxlength="300" required></textarea><br><br>
+
+                </fieldset>
+                <br>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </main>
     <footer>
