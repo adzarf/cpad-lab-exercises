@@ -202,30 +202,24 @@
                 const avatar = ref('https://i.pravatar.cc/200?img=47')
                 const darkMode = ref(false)
                 const skillCount = computed(() => skills.value.length)
+                const skills = ref(['Vue.js', 'JavaScript', 'HTML & CSS'])
+                const newSkill = ref('')
 
+                function addSkill() {
+                    const s = newSkill.value.trim()
+                    if (!s) return
+                    if (!skills.value.includes(s)) {
+                        skills.value.push(s)
+                    }
+                    newSkill.value = ''
+                }
+
+                function removeSkill(index) {
+                    skills.value.splice(index, 1)
+                }
                 return { name, title, bio, avatar, darkMode, skills, newSkill, addSkill, removeSkill, skillCount }
             }
         }).mount('#app')
-
-        const skills = ref(['Vue.js', 'JavaScript', 'HTML & CSS'])
-        const newSkill = ref('')
-
-        function addSkill() {
-            const s = newSkill.value.trim()
-            if (!s) return
-            if (!skills.value.includes(s)) {
-                skills.value.push(s)
-            }
-            newSkill.value = ''
-        }
-
-        function removeSkill(index) {
-            skills.value.splice(index, 1)
-        }
-
-        return {
-            name, title, bio, avatar, darkMode, skills, newSkill, addSkill, removeSkill
-        }
     </script>
 </body>
 
