@@ -61,6 +61,40 @@
         .dark .bio {
             color: #94A3B8;
         }
+
+        .editor {
+            background: #FFFFFF;
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+        }
+
+        .editor h3 {
+            margin-top: 0;
+            color: #35495E;
+        }
+
+        .editor label {
+            display: block;
+            margin: .75rem 0;
+            font-size: .9rem;
+        }
+
+        .editor input[type=text],
+        .editor textarea {
+            width: 100%;
+            padding: .5rem;
+            border: 1px solid #CBD5E1;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-top: .25rem;
+        }
+
+        .dark .editor {
+            background: #1E293B;
+            color: #F1F5F9;
+        }
     </style>
 </head>
 
@@ -71,6 +105,21 @@
             <h2>{{ name }}</h2>
             <p class="title">{{ title }}</p>
             <p class="bio">{{ bio }}</p>
+        </section>
+        <section class="editor">
+            <h3>Edit Profile</h3>
+            <label>Name:
+                <input v-model="name" type="text">
+            </label>
+            <label>Title:
+                <input v-model="title" type="text">
+            </label>
+            <label>Bio:
+                <textarea v-model="bio" rows="3"></textarea>
+            </label>
+            <label>
+                <input type="checkbox" v-model="darkMode"> Dark Mode
+            </label>
         </section>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
