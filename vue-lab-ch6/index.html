@@ -7,7 +7,20 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <div id="app">
+        <h1>{{ greeting }}</h1>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp, ref } = Vue
+
+        createApp({
+            setup() {
+                const greeting = ref('Hello from Vue 3!')
+                return { greeting }
+            }
+        }).mount('#app')
+    </script>
 </body>
 
 </html>
